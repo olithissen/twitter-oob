@@ -7,20 +7,20 @@ var app = flatiron.app;
 app.use(flatiron.plugins.cli, {
     dir: __dirname,
     usage: [
-        'This is a basic flatiron cli application example!',
+        'Welcome to twitter-oob',
         '',
-        'hello - say hello to somebody.'
+        'auth - Generate accessToken and accessTokenSecret using "out of band mode"'
     ]
 });
 
 app.cmd('auth', function() {
     app.prompt.get([{
         name: 'consumerkey',
-        message: 'Consumer Key',
+        message: 'Your app\'s Consumer Key',
         required: true
     }, {
         name: 'consumersecret',
-        message: 'Consumer Secret',
+        message: 'Your app\'s Consumer Secret',
         required: true
     }], function(err, result) {
         if (err) {
@@ -37,12 +37,12 @@ app.cmd('auth', function() {
 
             var url = 'https://twitter.com/oauth/authorize?oauth_token=' + requestToken;
 
-            app.log.info('Success! Please visit this link in your favourite browser:');
+            app.log.info('Copy and paste this URL into your browser:');
             app.log.info(url.grey);
 
             app.prompt.get([{
                 name: 'pin',
-                message: 'PIN',
+                message: 'The PIN you just saw on Twitter',
                 pattern: /^[0-9]{7}$/,
                 required: true
             }], function(err, result) {
@@ -51,9 +51,9 @@ app.cmd('auth', function() {
                         return errorhandler(err);
                     }
 
-                    app.log.info('@' + params.screen_name.grey);
-                    app.log.info(accessToken.grey);
-                    app.log.info(accessTokenSecret.grey);
+                    app.log.info(('Successfully authenticated @' + params.screen_name).white);
+                    app.log.info(('AccessToken: ' + accessToken).yellow);
+                    app.log.info(('accessTokenSecret: ' + accessTokenSecret).yellow);
                 });
             });
         });
