@@ -3,7 +3,7 @@
 > A Node.js CLI app to obtain Twitter credentials in "out of band" mode
 
 ## When to use it
-If you ever feel the need to write an application that needs to connect to Twitter
+If you ever want to write an application that connects to Twitter
 but you don't want to provide everything needed for a full-scale OAuth process like
 callback URLs and such. (And if you want to register your app on **account A** but use it
 with **account B**)
