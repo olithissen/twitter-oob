@@ -1,15 +1,29 @@
 {
-  "name": "twitter-oob",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.js",
-  "scripts": {
-    "test": "echo \"No test specified yet\" && exit 0"
-  },
-  "author": "Oli Thissen <oli@tonick.net>",
-  "license": "ISC",
-  "dependencies": {
-    "flatiron": "^0.4.3",
-    "oauth": "^0.9.15"
-  }
+    "name": "twitter-oob",
+    "version": "1.0.0",
+    "description": "A Node.js CLI app to obtain Twitter credentials in 'out of band' mode",
+    "main": "./src/index.js",
+    "bin": {
+        "twoob": "./bin/twoob.js"
+    },
+    "preferGlobal": true,
+    "scripts": {
+        "test": "echo \"No test specified yet\" && exit 0"
+    },
+    "author": {
+        "name": "Oli Thissen",
+        "email": "oli@tonick.net",
+        "twitter": "olithissen"
+    },
+    "readmeFilename": "README.md",
+    "bugs": "https://github.com/olithissen/twitter-oob/issues",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/olithissen/twitter-oob.git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "flatiron": "^0.4.3",
+        "oauth": "^0.9.15"
+    }
 }
