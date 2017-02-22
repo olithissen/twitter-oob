@@ -1,3 +1,5 @@
+[![build status](http://img.shields.io/travis/olithissen/twitter-oob.svg)](https://travis-ci.org/olithissen/twitter-oob)
+
 # twitter-oob
 
 > A Node.js CLI app to obtain Twitter credentials in "out of band" mode
