@@ -18,3 +18,14 @@ Using your apps *consumer key* and *consumer secret* you can generate a *request
 can be passed to Twitter as an URL-parameter.
 
 Instead of performing a callback to your backend you will receive a PIN-code for verification. A PIN-code that can then be used to obtail the final *access token* and *access token secret*
+
+## How to use it
+### Install
+```
+npm install twitter-oob -g
+```
+
+### Run
+```
+twoob auth
+```
