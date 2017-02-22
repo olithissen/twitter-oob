@@ -2,7 +2,7 @@ var flatiron = require('flatiron');
 var authflow = require('./lib/authflow');
 var errorhandler = require('./lib/errorhandler');
 
-var app = flatiron.app;
+var app = module.exports = flatiron.app;
 
 app.use(flatiron.plugins.cli, {
     dir: __dirname,
@@ -16,11 +16,15 @@ app.use(flatiron.plugins.cli, {
 app.cmd('auth', function() {
     app.prompt.get([{
         name: 'consumerkey',
-        message: 'Your app\'s Consumer Key',
+        pattern: /^[a-zA-Z0-9]{25}$/,
+        message: 'The Consumer Key is a 25 digit string',
+        description: 'Your app\'s Consumer Key',
         required: true
     }, {
         name: 'consumersecret',
-        message: 'Your app\'s Consumer Secret',
+        pattern: /^[a-zA-Z0-9]{50}$/,
+        message: 'The Consumer Secret is a 50 digit string',
+        description: 'Your app\'s Consumer Secret',
         required: true
     }], function(err, result) {
         if (err) {
@@ -42,7 +46,7 @@ app.cmd('auth', function() {
 
             app.prompt.get([{
                 name: 'pin',
-                message: 'The PIN you just saw on Twitter',
+                description: 'The PIN you just saw on Twitter',
                 pattern: /^[0-9]{7}$/,
                 required: true
             }], function(err, result) {
@@ -59,5 +63,3 @@ app.cmd('auth', function() {
         });
     });
 })
-
-app.start();

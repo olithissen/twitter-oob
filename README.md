@@ -1,3 +1,7 @@
+[![build status](http://img.shields.io/travis/olithissen/twitter-oob.svg)](https://travis-ci.org/olithissen/twitter-oob)
+[![npm version](http://badge.fury.io/js/node-tweet-cli.svg)](http://badge.fury.io/js/twitter-oob)
+[![Download Count](https://img.shields.io/npm/dm/node-tweet-cli.svg)](http://www.npmjs.com/package/twitter-oob)
+
 # twitter-oob
 
 > A Node.js CLI app to obtain Twitter credentials in "out of band" mode
