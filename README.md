@@ -1,7 +1,7 @@
 [![build status](http://img.shields.io/travis/olithissen/twitter-oob.svg)](https://travis-ci.org/olithissen/twitter-oob)
 [![npm version](http://badge.fury.io/js/twitter-oob.svg)](http://badge.fury.io/js/twitter-oob)
 [![Download Count](https://img.shields.io/npm/dm/twitter-oob.svg)](http://www.npmjs.com/package/twitter-oob)
-[![DepShield Badge](https://depshield.sonatype.org/badges/owner/repository/depshield.svg)](https://depshield.github.io)
+[![DepShield Badge](https://depshield.sonatype.org/badges/olithissen/twitter-oob/depshield.svg)](https://depshield.github.io)
 
 # twitter-oob
 
